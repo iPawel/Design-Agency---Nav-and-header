@@ -24,7 +24,7 @@ a {
 }
 
 .wrapper {
-    width: 85vw;
+    width: 95vw;
     max-width: 1200px;
     margin: 0 auto;
 
@@ -40,7 +40,6 @@ a {
     border: 1px solid $light-color;
     border-radius: 25px;
     background-color: transparent;
-    // background-color: rgba($primary-color, .2);
     transition: background-color .2s ease-in-out;
 
     &:hover {
@@ -49,7 +48,12 @@ a {
 
     &--fade-in {
         opacity: 0;
-    animation: fade 1.5s 1.8s ease-in-out forwards;
+        animation: fade 1.5s .6s ease-in-out forwards;
+
+        @include atMedium {
+            animation-delay: 1.9s;
+        }
+
     }
 
 }
